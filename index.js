@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 // Connect to MongoDB Atlas
 mongoose
   .connect(process.env.MONGO_URI)
